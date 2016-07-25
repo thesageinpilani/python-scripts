@@ -16,7 +16,7 @@ res = requests.get(st)
 jsondata = json.loads(res.text)
 events = jsondata['data']['Events']
 # target = open('myfile.txt','w')
-with open(jsondata['date'], 'w', encoding='utf-8') as target:
+with open(jsondata['date'] + '.txt', 'w', encoding='utf-8') as target:
 	target.write(jsondata['date'])
 	target.write('\n')
 	for i in events:
